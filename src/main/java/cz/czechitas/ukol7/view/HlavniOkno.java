@@ -35,33 +35,39 @@ public class HlavniOkno extends JFrame {
                 .container(this);
 
         formBuilder
-            .label("&Přezdívka")
-            .textField("prezdivka")
-            .add();
+                .label("&Přezdívka")
+                .textField("prezdivka")
+                .add();
 
-        formBuilder
-            .radioButton("&Bílá", "oblibenaBarva", Barva.Bila)
-            .add("span");
+        for (Barva barva : Barva.values()) {
+            formBuilder
+                    .radioButton(barva.getText(), "oblibenaBarva", barva)
+                    .add("span");
+        }
 
-        formBuilder
-            .radioButton("&Růžová", "oblibenaBarva", Barva.Ruzova)
-            .add("span");
-
-        formBuilder
-            .radioButton("&Fialová", "oblibenaBarva", Barva.Fialova)
-            .add("span");
-
-        formBuilder
-            .radioButton("&Vínová", "oblibenaBarva", Barva.Vinova)
-            .add("span");
-
-        formBuilder
-            .radioButton("&Zelená", "oblibenaBarva", Barva.Zelena)
-            .add("span");
-
-        formBuilder
-             .radioButton("&Modrá", "oblibenaBarva", Barva.Modra)
-             .add("span");
+//        formBuilder
+//            .radioButton("&Bílá", "oblibenaBarva", Barva.Bila)
+//            .add("span");
+//
+//        formBuilder
+//            .radioButton("&Růžová", "oblibenaBarva", Barva.Ruzova)
+//            .add("span");
+//
+//        formBuilder
+//            .radioButton("&Fialová", "oblibenaBarva", Barva.Fialova)
+//            .add("span");
+//
+//        formBuilder
+//            .radioButton("&Vínová", "oblibenaBarva", Barva.Vinova)
+//            .add("span");
+//
+//        formBuilder
+//            .radioButton("&Zelená", "oblibenaBarva", Barva.Zelena)
+//            .add("span");
+//
+//        formBuilder
+//             .radioButton("&Modrá", "oblibenaBarva", Barva.Modra)
+//             .add("span");
         formBuilder
              .panel(panel -> {
               JButton ulozitButton = new JButton(controller.getUlozitAction());

@@ -41,7 +41,7 @@ public class PreferenceController {
    public void handleUlozit() {
         PreferenceBean bean = this.model.getBean();
             System.out.printf("Přezdívka uživatele: %s", bean.getPrezdivka()).println();
-            System.out.printf("Vybraná barva: %s", bean.getOblibenaBarva()).println();
+            System.out.printf("Vybraná barva: %s", bean.getOblibenaBarva().getText()).println();
     }
 }
 
