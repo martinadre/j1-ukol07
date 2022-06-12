@@ -2,9 +2,9 @@ package cz.czechitas.ukol7.formbuilder;
 
 import com.jgoodies.binding.PresentationModel;
 import com.jgoodies.binding.adapter.BasicComponentFactory;
-import com.jgoodies.binding.adapter.Bindings;
 import com.jgoodies.binding.list.SelectionInList;
 import com.jgoodies.common.swing.MnemonicUtils;
+import cz.czechitas.ukol7.model.PreferenceBean;
 
 import javax.swing.*;
 import javax.swing.text.DateFormatter;
@@ -32,7 +32,7 @@ public class FormBuilder<B> implements WithModel<B>, FormBuilderWithContainer<B>
   }
 
   public static <B> WithModel<B> create(PresentationModel<B> model) {
-    return new FormBuilder<>(model);
+return new FormBuilder<>(model);
   }
 
   @Override
